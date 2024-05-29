@@ -1,0 +1,13 @@
+.login-form{
+  border: 1px solid white;
+  width: max-content;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.password-entry-container{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
