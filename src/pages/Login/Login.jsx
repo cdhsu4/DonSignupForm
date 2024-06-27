@@ -1,13 +1,15 @@
 import React from 'react';
 import './Login.css';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation, Navigate } from "react-router-dom";
 
 function Login( props ) {
     const [formData, setFormData] = React.useState({username:"", password:""});
     const [isLoggedIn, setIsLoggedIn] = React.useState();
     const [loginMsg, setLoginMsg] = React.useState("");
     const navigate = useNavigate();
+    const location = useLocation();
+    
     function onInputChange(event) {  
         setFormData((oldFormData) => (
           {...oldFormData, [event.target.name]: event.target.value})
@@ -36,12 +38,14 @@ function Login( props ) {
     }    
     
     if (props.user) {
-        return navigate("/", {replace: true});
+        /*return navigate("/", {replace: true});*/
+        return <Navigate to="/" replace={true} />;
     }
     
     return (
         <>
             <form id="login-form" className="login-form">
+                {location.state && <h3>{location.state.message}</h3>}
                 <div className="username-login-container">
                     <label htmlFor="username">Enter Your Username: </label>
                     <input type="email" placeholder="Enter your username" id="username" value={formData.username} name="username" required 

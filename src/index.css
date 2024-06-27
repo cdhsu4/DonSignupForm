@@ -16,3 +16,24 @@
 body {
   margin: 0;
 }
+
+.navbar {
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .li {
+  padding: 0.5rem;
+}
+
+.navbar button {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
+.browser-route-container{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
