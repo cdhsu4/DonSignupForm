@@ -1,0 +1,9 @@
+.homepage-header {
+    margin-bottom: .25rem;
+}
+
+.homepage-subnav {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
